@@ -2,23 +2,20 @@
 
 [![Gitter chat][gitter-image]][gitter-url]
 [![Merged PRs][prs-merged-image]][prs-merged-url]
-[![Issue stats][issuestats-image]][issuestats-url]
 [![GitHub contributors][contributors-image]][contributors-url]
 [![CLA assistant][cla-assistant-image]][cla-assistant-url]
 [![license][license-image]][license-url]
 
 [gitter-url]: https://gitter.im/tldr-pages/tldr
-[gitter-image]: https://badges.gitter.im/tldr-pages/tldr.svg
+[gitter-image]: https://img.shields.io/badge/chat-on_gitter-deeppink
 [prs-merged-url]: https://github.com/tldr-pages/tldr/pulls?q=is:pr+is:merged
-[prs-merged-image]: https://img.shields.io/github/issues-pr-closed-raw/tldr-pages/tldr.svg?label=merged+PRs
-[issuestats-url]: http://isitmaintained.com/project/tldr-pages/tldr
-[issuestats-image]: http://isitmaintained.com/badge/resolution/tldr-pages/tldr.svg
+[prs-merged-image]: https://img.shields.io/github/issues-pr-closed-raw/tldr-pages/tldr.svg?label=merged+PRs&color=green
 [contributors-url]: https://github.com/tldr-pages/tldr/graphs/contributors
 [contributors-image]: https://img.shields.io/github/contributors/tldr-pages/tldr.svg
 [cla-assistant-url]: https://cla-assistant.io/tldr-pages/tldr
 [cla-assistant-image]: https://cla-assistant.io/readme/badge/tldr-pages/tldr
 [license-url]: https://github.com/tldr-pages/tldr/blob/master/LICENSE.md
-[license-image]: https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey.svg
+[license-image]: https://img.shields.io/badge/license-CC_BY_4.0-blue.svg
 
 Contributions to the tldr-pages project are [most welcome](GOVERNANCE.md)!
 All `tldr` pages are stored in Markdown right here on GitHub.
@@ -71,6 +68,20 @@ As a quick reference, the format of each page should match the following templat
 For more detailed page formatting guidelines,
 refer to the [style guide](contributing-guides/style-guide.md).
 
+## Subcommands
+
+Many programs use subcommands for separating functionality, which may require their own separate pages.
+For instance, `git commit` has its own page, as well as `git push` and many others.
+To create a page for a subcommand, the program and subcommand need to be separated with a dash (`-`), so `git-commit.md` is shown when calling `tldr git commit`.
+
+You should always add a base page (e.g. `git`) that describes the program and basic switches like `--version` or `help`.
+See these examples for reference:
+
+* [git](pages/common/git.md)
+* [git-commit](pages/common/git-commit.md)
+* [aws](pages/common/aws.md)
+* [aws-s3](pages/common/aws-s3.md)
+
 ## Translations
 
 Translation of pages can be done by simply creating the corresponding page within the appropriate language-specific directory, creating that as well if it does not already exist.
@@ -116,7 +127,8 @@ Examples:
 
 ## Licensing
 
-`tldr` is licensed under a [Creative Commons Attribution 4.0 International License](LICENSE.md). The contents of the `scripts/` directory are licensed under the [MIT license](LICENSE.md).
+This repository is licensed under the [Creative Commons Attribution 4.0 International License](LICENSE.md).
+The contents of the `scripts/` directory are licensed under the [MIT license](LICENSE.md).
 
 Any contributions to this project are governed by the
 [Contributor License Agreement](https://cla-assistant.io/tldr-pages/tldr).
